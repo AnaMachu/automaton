@@ -1,6 +1,6 @@
-# Evidencia 1: Análisis Léxico 
+# Evidence 1: Lexical Analisis
 Ana Valeria Machuca Miranda- A01713851
-## Descripcion
+## Description
 ### Automaton:
 Algoritmo de Thompson
 NFA
@@ -10,5 +10,5 @@ Prolog- Paradigma Lógico
 
 ## Automata
 ## RegEx
-## Implementación
-## Pruebas
+## Implementation
+
