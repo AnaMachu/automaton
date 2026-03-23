@@ -12,22 +12,28 @@ I will proceed to model only these follwoing 5 words:
 
 
 ## RegEx
-According to the book Mastering Regular Expressions de Jeffrey E. F. Friedl, the principal definition of a RegEx is:
+According to the book Mastering Regular Expressions by Jeffrey E. F. Friedl, the principal definition of a RegEx is:
 "A regular expression is a way to describe a pattern of characters. It is a specialized language used to provide a precise description of a text pattern to a search engine, allowing it to find or manipulate strings that match that specific structure rather than just searching for fixed, literal text."
 
+Based on that, the RegEx constructed for repsective words is this one:
 *A (i(nu|glos)|(l(da|dalómë|qua)*
 
-### Automaton:
+### Automaton Theory:
 
 Accodrong to a Deterministic Finite Automaton (DFA) is a quintuple $(Q, \Sigma, \delta, s, F)$, where $Q$ is the finite set of states, $\Sigma$ is the input alphabet, $s \in Q$ is the starting state, and $F \subseteq Q$ is the set of final states. The defining characteristic of a DFA is its transition function $\delta: Q \times \Sigma \rightarrow Q$, which maps each pair of state and input symbol to exactly one state. In contrast, a Nondeterministic Finite Automaton (NFA) is also defined as a quintuple $(Q, \Sigma, \delta, s, F)$ with the same components, but its transition function $\delta: Q \times \Sigma \rightarrow 2^Q$ maps to the power set of $Q$, meaning it can transition to a set of multiple states or none at all for a single input.The primary difference between the two lies in the nature of their transitions: while a DFA provides a single, deterministic path for a given input, an NFA allows for multiple concurrent paths.
 
-
-
 ## Automata
-<img width="1429" height="660" alt="automata elvish" src="https://github.com/user-attachments/assets/f5451eea-47a8-448f-89ac-4491e79d98fe" />
+Taking all of this into account, I chose to implement a DFA because my main goal is to exclusively recognize these five words and reject everything else. Each word follows a unique and well-defined path through the automaton, making an NFA unnecessary. Furthermore, NFAs can introduce ambiguity, which would complicate the implementation process. A DFA, on the other hand, is generally more straightforward to implement and fits perfectly with the language and specific case being analyzed, which is why it was the preferred choice.
+
+Here is the design proposal:
+<img width="1531" height="860" alt="automata elvish (1)" src="https://github.com/user-attachments/assets/b6d99e7e-db1f-49af-b432-effd861d233c" />
 
 ## Implementation
+
 ## Test Cases
 
 ## Spatial and Temporal Complexity
 DFA, complexity is O(n^2)
+
+## References
+
