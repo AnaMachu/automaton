@@ -1,14 +1,33 @@
 # Evidence 1: Lexical Analisis
 Ana Valeria Machuca Miranda- A01713851
-## Description
+## Language Description
+Quenya stands as one of the most prominent constructed languages within J.R.R. Tolkien’s The Lord of the Rings saga, serving as an ancient tongue and the progenitor of several other languages spoken throughout Middle-earth (Forgotten Realms Fandom). Primarily spoken by the non-Telerin Elves who reached the Undying Lands of Valinor, Quenya descended from Ancient Quenya, which itself evolved from Common Eldarin (Tolkien Gateway). While the language was shared by the Elven houses, it branched into two mutually intelligible dialects: Vanyarin Quenya, which remained closest to the archaic forms, and Ñoldorin Quenya, spoken by the House of Ñoldor (LOTR Fandom). To record this "High-Elven" tongue, speakers typically utilized the Tengwar script, also famously referred to as the Fëanorian characters (Tolkien Gateway; LOTR Fandom).
+
+I will proceed to model only these follwoing 5 words:
+-Ainu - Quenya Tengwar word meaning 'Holy One'. The plural is Ainur, and refers to the primordial spirits created by Ilúvatar.
+-Aiglos - Sindarin for 'Icicle', also name of Gil-galad's spear
+-Alda - Quenya word for 'Tree'.
+-Aldalómë - Combination of Quenya words meaning 'tree-shadow' used by Treebeard the Ent.
+-Alqua - Sindarin word for 'Swan'.
+
+
+## RegEx
+According to the book Mastering Regular Expressions de Jeffrey E. F. Friedl, the principal definition of a RegEx is:
+"A regular expression is a way to describe a pattern of characters. It is a specialized language used to provide a precise description of a text pattern to a search engine, allowing it to find or manipulate strings that match that specific structure rather than just searching for fixed, literal text."
+
+*A (i(nu|glos)|(l(da|dalómë|qua)*
+
 ### Automaton:
-Algoritmo de Thompson
-NFA
-Algoritmo de subconjuntos
-DFA
-Prolog- Paradigma Lógico
+
+Accodrong to a Deterministic Finite Automaton (DFA) is a quintuple $(Q, \Sigma, \delta, s, F)$, where $Q$ is the finite set of states, $\Sigma$ is the input alphabet, $s \in Q$ is the starting state, and $F \subseteq Q$ is the set of final states. The defining characteristic of a DFA is its transition function $\delta: Q \times \Sigma \rightarrow Q$, which maps each pair of state and input symbol to exactly one state. In contrast, a Nondeterministic Finite Automaton (NFA) is also defined as a quintuple $(Q, \Sigma, \delta, s, F)$ with the same components, but its transition function $\delta: Q \times \Sigma \rightarrow 2^Q$ maps to the power set of $Q$, meaning it can transition to a set of multiple states or none at all for a single input.The primary difference between the two lies in the nature of their transitions: while a DFA provides a single, deterministic path for a given input, an NFA allows for multiple concurrent paths.
+
+
 
 ## Automata
-## RegEx
-## Implementation
+<img width="1429" height="660" alt="automata elvish" src="https://github.com/user-attachments/assets/f5451eea-47a8-448f-89ac-4491e79d98fe" />
 
+## Implementation
+## Test Cases
+
+## Spatial and Temporal Complexity
+DFA, complexity is O(n^2)
