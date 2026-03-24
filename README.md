@@ -26,9 +26,12 @@ Accodrong to a Deterministic Finite Automaton (DFA) is a quintuple $(Q, \Sigma, 
 Taking all of this into account, I chose to implement a DFA because my main goal is to exclusively recognize these five words and reject everything else. Each word follows a unique and well-defined path through the automaton, making an NFA unnecessary. Furthermore, NFAs can introduce ambiguity, which would complicate the implementation process. A DFA, on the other hand, is generally more straightforward to implement and fits perfectly with the language and specific case being analyzed, which is why it was the preferred choice.
 
 Here is the design proposal:
-<img width="1531" height="860" alt="automata elvish (1)" src="https://github.com/user-attachments/assets/b6d99e7e-db1f-49af-b432-effd861d233c" />
+<img width="1531" height="860" alt="automata elvish (2)" src="https://github.com/user-attachments/assets/93093cdb-f8a2-4c99-978c-d423fa575b80" />
 
 ## Implementation
+
+transition(CurrentState, NextState, Letter)
+
 
 ## Test Cases
 
