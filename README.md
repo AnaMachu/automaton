@@ -15,7 +15,7 @@ I will proceed to model only these follwoing 5 words:
 -Alqua - Sindarin word for 'Swan'.
 
 
-## RegEx
+### RegEx
 According to the book Mastering Regular Expressions by Jeffrey E. F. Friedl, the principal definition of a RegEx is:
 "A regular expression is a way to describe a pattern of characters. It is a specialized language used to provide a precise description of a text pattern to a search engine, allowing it to find or manipulate strings that match that specific structure rather than just searching for fixed, literal text."
 
@@ -25,6 +25,7 @@ The RegEx constructed for repsective words is this one:
 ### Automaton Theory:
 
 Accodring to  a Deterministic Finite Automaton (DFA) is a quintuple $(Q, \Sigma, \delta, s, F)$, where $Q$ is the finite set of states, $\Sigma$ is the input alphabet, $s \in Q$ is the starting state, and $F \subseteq Q$ is the set of final states. The defining characteristic of a DFA is its transition function $\delta: Q \times \Sigma \rightarrow Q$, which maps each pair of state and input symbol to exactly one state. In contrast, a Nondeterministic Finite Automaton (NFA) is also defined as a quintuple $(Q, \Sigma, \delta, s, F)$ with the same components, but its transition function $\delta: Q \times \Sigma \rightarrow 2^Q$ maps to the power set of $Q$, meaning it can transition to a set of multiple states or none at all for a single input.The primary difference between the two lies in the nature of their transitions: while a DFA provides a single, deterministic path for a given input, an NFA allows for multiple concurrent paths.
+
 
 ## Automata
 Taking all of this into account, I chose to implement a DFA because my main goal is to exclusively recognize these five words and reject everything else. Each word follows a unique and well-defined path through the automaton, making an NFA unnecessary. Furthermore, NFAs can introduce ambiguity, which would complicate the implementation process. A DFA, on the other hand, is generally more straightforward to implement and fits perfectly with the language and specific case being analyzed, which is why it was the preferred choice.
@@ -69,9 +70,35 @@ These rules will be fed by the knowledge base of the transitions. All of this ca
 
 ## Test Cases
 
+### Succesful Cases
+These ones should return true as they are the defined words
+1. Ainu
+2. Aiglos
+3. Alda
+4. Aldalome
+5. Alqua
 
-## Spatial and Temporal Complexity
-DFA, complexity is O(n^2)
+
+### Unsuccesful Cases
+These ones should return false as they are the defined words
+1. Algo
+2. Aldaloma
+
+To try all cases in one shot just use the run_all_tests function.
+## Spatial and Temporal Complexity Analysis
+It's clasification belongs to Regular o type 3 due to it's capabilty of being represented either by a NFA or a DFA. And it does not has the need to use a pushdown automata.
+
+Since the number of transitions is fixed and finite,it never grows with the input, that lookup is effectively constant. So the total time scales linearly with the length of the word.
+DFA spatial complexity is O(n) and time complexity of O(n)
 
 ## References
+Brüggemann-Klein, A. (s. f.). Regular Expressions into Finite Automata. Institut für Informatik, Universität Freiburg.
+
+Salomaa, K., & Yu, S. (2005). NFA to DFA transformation for finite languages. En Implementation and Application of Automata (pp. 149–158). Springer.
+
+Fandom. (s.f.). Quenya. Forgotten Realms Wiki. Recuperado el 24 de marzo de 2026, de https://www.linguee.com/spanish-english/translation/pasar+la+p%C3%A1gina.html
+
+Fandom. (s.f.). Quenya. Lord of the Rings Wiki. Recuperado el 24 de marzo de 2026, de https://www.linguee.com/spanish-english/translation/pasar+la+p%C3%A1gina.html
+
+Tolkien Gateway. (s.f.). Quenya. Recuperado el 24 de marzo de 2026, de https://www.linguee.com/spanish-english/translation/pasar+la+p%C3%A1gina.html
 
