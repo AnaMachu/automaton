@@ -24,7 +24,7 @@ The RegEx constructed for repsective words is this one:
 
 ### Automaton Theory:
 
-Accodring to Sheng Yu, in an article byDepartment of Computer Science University of Western Ontario, a Deterministic Finite Automaton (DFA) is a quintuple $(Q, \Sigma, \delta, s, F)$, where $Q$ is the finite set of states, $\Sigma$ is the input alphabet, $s \in Q$ is the starting state, and $F \subseteq Q$ is the set of final states. The defining characteristic of a DFA is its transition function $\delta: Q \times \Sigma \rightarrow Q$, which maps each pair of state and input symbol to exactly one state. In contrast, a Nondeterministic Finite Automaton (NFA) is also defined as a quintuple $(Q, \Sigma, \delta, s, F)$ with the same components, but its transition function $\delta: Q \times \Sigma \rightarrow 2^Q$ maps to the power set of $Q$, meaning it can transition to a set of multiple states or none at all for a single input.The primary difference between the two lies in the nature of their transitions: while a DFA provides a single, deterministic path for a given input, an NFA allows for multiple concurrent paths.
+Accodring to Sheng Yu, in an article by the Department of Computer Science University of Western Ontario, a Deterministic Finite Automaton (DFA) is a quintuple $(Q, \Sigma, \delta, s, F)$, where $Q$ is the finite set of states, $\Sigma$ is the input alphabet, $s \in Q$ is the starting state, and $F \subseteq Q$ is the set of final states. The defining characteristic of a DFA is its transition function $\delta: Q \times \Sigma \rightarrow Q$, which maps each pair of state and input symbol to exactly one state. In contrast, a Nondeterministic Finite Automaton (NFA) is also defined as a quintuple $(Q, \Sigma, \delta, s, F)$ with the same components, but its transition function $\delta: Q \times \Sigma \rightarrow 2^Q$ maps to the power set of $Q$, meaning it can transition to a set of multiple states or none at all for a single input.The primary difference between the two lies in the nature of their transitions: while a DFA provides a single, deterministic path for a given input, an NFA allows for multiple concurrent paths.
 
 
 ## Automata
@@ -96,9 +96,9 @@ Brüggemann-Klein, A. (s. f.). Regular Expressions into Finite Automata. Institu
 
 Salomaa, K., & Yu, S. (2005). NFA to DFA transformation for finite languages. En Implementation and Application of Automata (pp. 149–158). Springer.
 
-Fandom. (s.f.). Quenya. Forgotten Realms Wiki. Recuperado el 24 de marzo de 2026, de https://www.linguee.com/spanish-english/translation/pasar+la+p%C3%A1gina.html
+Fandom. (s.f.). Quenya. Forgotten Realms Wiki. Recuperado el 24 de marzo de 2026
 
-Fandom. (s.f.). Quenya. Lord of the Rings Wiki. Recuperado el 24 de marzo de 2026, de https://www.linguee.com/spanish-english/translation/pasar+la+p%C3%A1gina.html
+Fandom. (s.f.). Quenya. Lord of the Rings Wiki. Recuperado el 24 de marzo de 2026
 
-Tolkien Gateway. (s.f.). Quenya. Recuperado el 24 de marzo de 2026, de https://www.linguee.com/spanish-english/translation/pasar+la+p%C3%A1gina.html
+Tolkien Gateway. (s.f.). Quenya. Recuperado el 24 de marzo de 2026.
 
